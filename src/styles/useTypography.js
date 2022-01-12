@@ -25,6 +25,9 @@ export const useTypography = makeStyles(theme => ({
     textLight: {
         color: '#FFF !important'
     },
+    uppercase: {
+        textTransform: 'uppercase'
+    },
     rem7: {
         fontSize: '.7rem !important'
     },

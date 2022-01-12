@@ -1,14 +1,39 @@
-import { IconButton } from '@mui/material'
+import { Drawer, IconButton } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 import { Link } from 'react-router-dom'
 import classNames from 'classnames';
 import logo from '../../assets/images/logo-dark.png';
-import { useDisplay} from '../../styles';
+import { useDisplay, useTypography } from '../../styles';
 import { useStyles } from './styles'
+import { useCallback, useState } from 'react';
 
 const Header = () => {
     const classes = useStyles();
     const display = useDisplay();
+    const text = useTypography();
+
+    const [ openMenu, setOpenMenu ] = useState(false);
+
+    const getList = useCallback(() => (
+        <>
+            <li  className={classNames(classes.headerListItem)}>
+                <Link to="/" className={classNames(text.noUnderline, text.uppercase)}>
+                    Our company
+                </Link>
+            </li>
+            <li  className={classNames(classes.headerListItem)}>
+                <Link to="/" className={classNames(text.noUnderline, text.uppercase)}>
+                    Locations
+                </Link>
+            </li>
+            <li  className={classNames(classes.headerListItem)}>
+                <Link to="/" className={classNames(text.noUnderline, text.uppercase)}>
+                    Contact
+                </Link>
+            </li>
+        </>
+    ), [ classes, text ]);
 
     return (
         <header className={classNames(classes.header)}>
@@ -20,10 +45,21 @@ const Header = () => {
                         className={classNames(display.block, display.h100, display.w100)} 
                     />
                 </Link>
-                <IconButton>
-                    <MenuIcon />
+                <IconButton onClick={() => setOpenMenu(b => !b)}>
+                    { openMenu ? <CloseIcon /> : <MenuIcon /> }
                 </IconButton>
             </div>
+            <Drawer
+                anchor="top"
+                open={openMenu}
+                classes={{ paper: classes.drawerPaper, root: classes.drawerRoot }}
+                onClose={() => setOpenMenu(false)}
+                >
+                <ul 
+                    className={classNames(classes.headerList, display.flex, display.flexColumn)}>
+                    { getList() }
+                </ul>
+            </Drawer>
         </header>
     );
 };
