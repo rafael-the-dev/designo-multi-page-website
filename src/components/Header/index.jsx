@@ -1,4 +1,4 @@
-import { Drawer, IconButton } from '@mui/material'
+import { Drawer, Hidden, IconButton } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import { Link } from 'react-router-dom'
@@ -36,7 +36,7 @@ const Header = () => {
     ), [ classes, text ]);
 
     return (
-        <header className={classNames(classes.header)}>
+        <header className={classNames(classes.header, display.flex, display.alignCenter, display.justifyBetween)}>
             <div className={classNames(display.alignCenter, display.flex, display.justifyBetween)}>
                 <Link to="/" className={classNames(classes.logoContainer)}>
                     <img 
@@ -45,21 +45,33 @@ const Header = () => {
                         className={classNames(display.block, display.h100, display.w100)} 
                     />
                 </Link>
-                <IconButton onClick={() => setOpenMenu(b => !b)}>
-                    { openMenu ? <CloseIcon /> : <MenuIcon /> }
-                </IconButton>
+                <Hidden smUp>
+                    <IconButton onClick={() => setOpenMenu(b => !b)}>
+                        { openMenu ? <CloseIcon /> : <MenuIcon /> }
+                    </IconButton>
+                </Hidden>
             </div>
-            <Drawer
-                anchor="top"
-                open={openMenu}
-                classes={{ paper: classes.drawerPaper, root: classes.drawerRoot }}
-                onClose={() => setOpenMenu(false)}
-                >
-                <ul 
-                    className={classNames(classes.headerList, display.flex, display.flexColumn)}>
-                    { getList() }
-                </ul>
-            </Drawer>
+            <Hidden smDown>
+                <nav>
+                    <ul 
+                        className={classNames(classes.headerNavList, display.flex, display.alignCenter)}>
+                        { getList() }
+                    </ul>
+                </nav>
+            </Hidden>
+            <Hidden smUp>
+                <Drawer
+                    anchor="top"
+                    open={openMenu}
+                    classes={{ paper: classes.drawerPaper, root: classes.drawerRoot }}
+                    onClose={() => setOpenMenu(false)}
+                    >
+                    <ul 
+                        className={classNames(classes.headerList, display.flex, display.flexColumn)}>
+                        { getList() }
+                    </ul>
+                </Drawer>
+            </Hidden>
         </header>
     );
 };

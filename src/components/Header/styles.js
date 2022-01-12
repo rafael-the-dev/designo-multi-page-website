@@ -2,7 +2,16 @@ import { makeStyles } from "@mui/styles";
 
 export const useStyles = makeStyles(theme => ({
     header: {
-        padding: '.8rem 3%'
+        padding: '.8rem 3%',
+        [theme.breakpoints.up('sm')]: {
+            padding: '1.55rem 5%'
+        },
+        [theme.breakpoints.up('md')]: {
+            padding: '1.55rem 8%'
+        },
+        [theme.breakpoints.up('lg')]: {
+            padding: '1.55rem 10%'
+        }
     },
     logoContainer: {
         height: 25
@@ -19,7 +28,25 @@ export const useStyles = makeStyles(theme => ({
         }
     },
     headerListItem: {
-        padding: '.7rem 24px'
+        padding: '.7rem 24px',
+        [theme.breakpoints.up('sm')]: {
+            fontSize: '.83rem',
+            marginRight: '1.5rem',
+            padding: '.3rem 0',
+            '&:last-child': {
+                marginRight: 0
+            },
+            '& a': {
+                color: '#333136',
+                transition: 'all 1s ease-in-out',
+                '&:hover': {
+                    fontWeight: 700
+                }
+            }
+        }
+    },
+    headerNavList: {
+
     },
     drawerRoot: {
         top: '64px !important',
