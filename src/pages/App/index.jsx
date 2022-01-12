@@ -7,6 +7,7 @@ import loadable from '@loadable/component';
 const App = () => {
     const theme = createTheme();
 
+    const Header = loadable(() => import('../../components/Header'));
     const Home = loadable(() => import('../Home'));
 
     return (
@@ -15,6 +16,7 @@ const App = () => {
                 <ThemeProvider theme={theme}>
                     <AppContextProvider>
                         <Router>
+                            <Header />
                             <Routes>
                                 <Route exact path="/" element={<Home />} />
                             </Routes>
