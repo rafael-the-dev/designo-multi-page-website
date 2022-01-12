@@ -8,6 +8,7 @@ const App = () => {
     const theme = createTheme();
 
     const Header = loadable(() => import('../../components/Header'));
+    const Footer = loadable(() => import('../../components/Footer'));
     const Home = loadable(() => import('../Home'));
 
     return (
@@ -20,6 +21,7 @@ const App = () => {
                             <Routes>
                                 <Route exact path="/" element={<Home />} />
                             </Routes>
+                            <Footer />
                         </Router>
                     </AppContextProvider>
                 </ThemeProvider>

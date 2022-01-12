@@ -141,6 +141,11 @@ export const useResponsive = makeStyles(theme => ({
             marginBottom: '0rem !important'
         }
     },
+    smWAuto: {
+        [theme.breakpoints.up('sm')]: {
+            width: 'auto'
+        }
+    },
     mdMb1: {
         [theme.breakpoints.up('md')]: {
             marginBottom: '1rem !important'

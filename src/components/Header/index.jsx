@@ -4,13 +4,14 @@ import CloseIcon from '@mui/icons-material/Close';
 import { Link } from 'react-router-dom'
 import classNames from 'classnames';
 import logo from '../../assets/images/logo-dark.png';
-import { useDisplay, useTypography } from '../../styles';
+import { useDisplay, useResponsive, useTypography } from '../../styles';
 import { useStyles } from './styles'
 import { useCallback, useState } from 'react';
 
 const Header = () => {
     const classes = useStyles();
     const display = useDisplay();
+    const responsive = useResponsive();
     const text = useTypography();
 
     const [ openMenu, setOpenMenu ] = useState(false);
@@ -37,7 +38,7 @@ const Header = () => {
 
     return (
         <header className={classNames(classes.header, display.flex, display.alignCenter, display.justifyBetween)}>
-            <div className={classNames(display.alignCenter, display.flex, display.justifyBetween)}>
+            <div className={classNames(display.alignCenter, display.flex, display.justifyBetween, display.w100, responsive.smWAuto)}>
                 <Link to="/" className={classNames(classes.logoContainer)}>
                     <img 
                         src={logo} 
