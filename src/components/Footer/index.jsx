@@ -50,6 +50,9 @@ const Footer = () => {
                     </ul>
                 </nav>
             </div>
+            <Hidden smDown>
+                <Divider className={classNames(classes.footerDivider, display.mt2, display.mb1, display.w100, display.opacity7)}/>
+            </Hidden>
             <div className={classNames(display.flex, display.alignCenter, display.flexColumn, display.justifyBetween, 
                 display.mt2, responsive.smRow, display.w100)}>
                 <div className={classNames(display.flex, display.flexColumn, display.alignCenter, responsive.smRow)}>
