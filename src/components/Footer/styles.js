@@ -20,5 +20,17 @@ export const useStyles = makeStyles(theme => ({
         '&:last-child': {
             marginBottom: 0
         }
+    },
+    footerAddress: {
+        lineHeight: '1.4rem'
+    },
+    footerSocialMediaItem: {
+        marginRight: '.8rem',
+        '&:last-child': {
+            marginRight: 0
+        }
+    },
+    footerSocialMediaIcon: {
+        color: '#E7816B !important'
     }
 }));
