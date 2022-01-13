@@ -1,9 +1,10 @@
 import { Avatar, Grid, Typography } from '@mui/material';
-import { useDisplay, useResponsive, useTypography } from '../../../styles';
+import { useBackground, useDisplay, useResponsive, useTypography } from '../../../styles';
 import { useStyles } from './styles'
 import classNames from 'classnames';
 
-const Card = ({ image, description, title }) => {
+const Card = ({ image, description, title, avatarClassName }) => {
+    const bg = useBackground();
     const classes = useStyles();
     const display = useDisplay();
     const responsive = useResponsive();
@@ -15,7 +16,7 @@ const Card = ({ image, description, title }) => {
                 responsive.smRow, display.w100, display.mb2, responsive.mdColumn)}>
                 <Avatar 
                     src={image}
-                    className={classNames(classes.avatar)}
+                    className={classNames(classes.avatar, bg.noRepeat, avatarClassName)}
                     alt="illustration"
                 />
                 <div className={classNames(display.flex, display.alignCenter, display.flexColumn,

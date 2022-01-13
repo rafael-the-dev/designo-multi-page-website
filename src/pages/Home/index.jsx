@@ -4,10 +4,12 @@ import passionaleIllustration from '../../assets/images/home/illustration-passio
 import resourcefulIllustration from '../../assets/images/home/illustration-resourceful.svg'
 import friendlyIllustration from '../../assets/images/home/illustration-friendly.svg'
 import classNames from 'classnames'; /*useResponsive, useTypography*/
+import { useStyles } from './styles'
 import { useDisplay, } from '../../styles';
 
 const Home = () => {
     const display = useDisplay();
+    const classes = useStyles();
 
     return (
         <Grid container className={classNames(display.px)}>
@@ -17,11 +19,13 @@ const Home = () => {
                 title="Passionate"
             />
             <Card 
+                avatarClassName={classNames(classes.resourcefulAvatar)}
                 description="Everything that we do has a strategic purpose. We use an agile approach in all of our projects and value customer collaboration. It guarantees superior results that fulfill our clients’ needs."
                 image={resourcefulIllustration}
                 title="Resouceful"
             />
             <Card 
+                avatarClassName={classNames(classes.friendlyAvatar)}
                 description=" We are a group of enthusiastic folks who know how to put people first. Our success depends on our customers, and we strive to give them the best experience a company can provide."
                 image={friendlyIllustration}
                 title="Friendly"
