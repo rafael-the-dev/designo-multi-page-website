@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo-light.png';
-import { useDisplay, useTypography } from '../../styles';
+import { useDisplay, useResponsive, useTypography } from '../../styles';
 import { useStyles } from './styles'
 import { Divider, Hidden, Typography } from '@mui/material'
 import TwitterIcon from '@mui/icons-material/Twitter';
@@ -13,11 +13,13 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 const Footer = () => {
     const classes = useStyles();
     const display = useDisplay();
+    const responsive = useResponsive();
     const text = useTypography();
 
     return (
         <footer className={classNames(classes.footer)}>
-            <div className={classNames(display.flex, display.flexColumn, display.alignCenter)}>
+            <div className={classNames(display.flex, display.flexColumn, display.alignCenter, responsive.smRow, 
+                display.w100, responsive.smJustifyBetween)}>
                 <Link to="/" className={classNames(classes.logoContainer)}>
                     <img 
                         src={logo} 
@@ -29,7 +31,7 @@ const Footer = () => {
                     <Divider className={classNames(classes.footerDivider, display.mt2, display.mb1, display.w100)}/>
                 </Hidden>
                 <nav className={classNames(classes.footerNav)}>
-                    <ul className={classNames(display.flex, display.flexColumn, display.alignCenter)}>
+                    <ul className={classNames(display.flex, display.flexColumn, display.alignCenter, responsive.smRow)}>
                         <li  className={classNames(classes.headerListItem)}>
                             <Link to="/" className={classNames(text.noUnderline, text.uppercase, text.textLight, display.opacity8)}>
                                 Our company
@@ -48,17 +50,21 @@ const Footer = () => {
                     </ul>
                 </nav>
             </div>
-            <div className={classNames(display.flex, display.alignCenter, display.flexColumn, display.justifyBetween, display.mt2)}>
-                <div className={classNames(display.flex, display.flexColumn, display.alignCenter,)}>
-                    <div className={classNames(display.flex, display.flexColumn, display.alignCenter)}>
+            <div className={classNames(display.flex, display.alignCenter, display.flexColumn, display.justifyBetween, 
+                display.mt2, responsive.smRow, display.w100)}>
+                <div className={classNames(display.flex, display.flexColumn, display.alignCenter, responsive.smRow)}>
+                    <div className={classNames(display.flex, display.flexColumn, display.alignCenter, 
+                        responsive.smAlignStart)}>
                         <Typography gutterBottom component="h2" className={classNames(classes.footerSubtitle, text.textLight, display.opacity7)}>
                             Designo Central Office
                         </Typography>
-                        <address className={classNames(text.alignCenter, text.textLight, display.opacity7, classes.footerAddress)}>
+                        <address className={classNames(text.alignCenter, text.textLight, display.opacity7, 
+                            classes.footerAddress, text.smAlignStart)}>
                             3886 Wellington Street<br />Toronto, Ontario M9C 3J5
                         </address>
                     </div>
-                    <div className={classNames(display.flex, display.flexColumn, display.alignCenter, display.mt1)}>
+                    <div className={classNames(display.flex, display.flexColumn, display.alignCenter, 
+                        responsive.smAlignStart, display.mt1, responsive.smMt0, responsive.smMl2)}>
                         <Typography gutterBottom component="h2" className={classNames(classes.footerSubtitle, text.textLight, display.opacity7)}>
                             Contact Us (Central Office)
                         </Typography>

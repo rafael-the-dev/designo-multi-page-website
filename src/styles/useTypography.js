@@ -45,6 +45,11 @@ export const useTypography = makeStyles(theme => ({
             textAlign: 'right !important'
         }
     },
+    smAlignStart: {
+        [theme.breakpoints.up('sm')]: {
+            textAlign: 'left !important'
+        }
+    },
     mdAlignEnd: {
         [theme.breakpoints.up('md')]: {
             textAlign: 'right !important'

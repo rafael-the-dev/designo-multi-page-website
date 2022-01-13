@@ -12,13 +12,24 @@ export const useStyles = makeStyles(theme => ({
         backgroundColor: '#979797'
     },
     footerNav: {
-        marginTop: '1rem'
+        marginTop: '1rem',
+        [theme.breakpoints.up('sm')]: {
+            marginTop: 0,
+        }
     },
     headerListItem: {
         fontSize: '.8rem',
         marginBottom: '1.3rem',
         '&:last-child': {
             marginBottom: 0
+        },
+        [theme.breakpoints.up('sm')]: {
+            marginBottom: 0,
+            marginRight: '.8rem',
+            '&:last-child': {
+                marginRight: 0
+            },
+
         }
     },
     footerAddress: {
