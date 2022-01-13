@@ -10,22 +10,28 @@ const Card = ({ image, description, title }) => {
     const text = useTypography();
 
     return (
-        <Grid item component="article" >
+        <Grid item component="article" xs={12} md={4}>
             <div className={classNames(display.flex, display.alignCenter, display.flexColumn,
-                responsive.smRow, display.w100, display.mb2)}>
+                responsive.smRow, display.w100, display.mb2, responsive.mdColumn)}>
                 <Avatar 
                     src={image}
                     className={classNames(classes.avatar)}
                     alt="illustration"
                 />
-                <Typography 
-                    component="h2" 
-                    className={classNames(display.mt1, text.uppercase, text.font7, classes.cardTitle)}>
-                    { title }
-                </Typography>
-                <Typography className={classNames(text.rem85, classes.cardDescription, display.mt1, text.alignCenter)}>
-                    { description }
-                </Typography>
+                <div className={classNames(display.flex, display.alignCenter, display.flexColumn,
+                    responsive.smAlignStart, display.mt1, responsive.smMt0, responsive.smMl2, responsive.ml0,
+                    responsive.mt1)}>
+                    <Typography 
+                        component="h2" 
+                        className={classNames(text.uppercase, text.font7, classes.cardTitle, classes.darkText,
+                        display.w100, text.smAlignStart, text.alignCenter, text.mdAlignCenter )}>
+                        { title }
+                    </Typography>
+                    <Typography className={classNames(text.rem85, classes.cardDescription, display.mt1, 
+                        text.alignCenter, text.smAlignStart, classes.darkText, text.mdAlignCenter)}>
+                        { description }
+                    </Typography>
+                </div>
             </div>
         </Grid>
     );

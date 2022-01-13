@@ -143,7 +143,7 @@ export const useResponsive = makeStyles(theme => ({
     },
     smWAuto: {
         [theme.breakpoints.up('sm')]: {
-            width: 'auto'
+            width: 'auto !important'
         }
     },
     mdMb1: {

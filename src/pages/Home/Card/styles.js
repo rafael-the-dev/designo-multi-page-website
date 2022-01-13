@@ -5,10 +5,12 @@ export const useStyles = makeStyles(theme => ({
         height: '180px !important',
         width: '180px !important',
     },
+    darkText: {
+        color: '#333136'
+    },
     cardTitle: {
 
     },
     cardDescription: {
-        color: '#333136'
     }
 }));
