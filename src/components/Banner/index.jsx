@@ -11,7 +11,7 @@ const Banner = () => {
 
     return (
         <section className={classNames(display.alignCenter, display.flex, display.flexColumn, bg.noRepeat, 
-            bg.cover, bg.center, classes.banner, display.pb3, display.pt3)}>
+            classes.banner, display.pb3, display.pt3)}>
             <div className={classNames(display.alignCenter, display.flex, display.flexColumn)}>
                 <Typography className={classNames(text.alignCenter, text.font7, text.textLight, display.opacity8)} component="h2" variant="h5">
                     Let’s talk about<br />your project

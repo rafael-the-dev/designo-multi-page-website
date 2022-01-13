@@ -3,7 +3,10 @@ import bannerImage from '../../assets/images/pattern/bg-pattern-design-pages-int
 
 export const useStyles = makeStyles(theme => ({
     banner: {
-        backgroundImage: `linear-gradient(to bottom, #5D0202, #5D0202), url(${bannerImage})`,
+        backgroundColor: '#E7816B',
+        backgroundImage: `url(${bannerImage})`,
+        backgroundPosition: 'right 4% center',
+        backgroundSize: 655,
         borderRadius: 20,
         boxSizing: 'border-box',
         marginLeft: 'auto',
