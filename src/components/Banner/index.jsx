@@ -1,5 +1,5 @@
 import { useStyles } from './styles'
-import { useBackground, useDisplay, useResponsive, useTypography } from '../../styles';
+import { useBackground, useDisplay, useTypography } from '../../styles';
 import classNames from 'classnames';
 import { Button, Typography } from '@mui/material'
 
