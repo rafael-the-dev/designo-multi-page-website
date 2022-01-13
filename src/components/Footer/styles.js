@@ -3,7 +3,7 @@ import { makeStyles } from "@mui/styles";
 export const useStyles = makeStyles(theme => ({
     footer: {
         backgroundColor: '#1D1C1E',
-        padding: '4rem 3% 2rem 3%'
+        padding: '15rem 3% 2.3rem 3%'
     },
     logoContainer: {
         height: 25

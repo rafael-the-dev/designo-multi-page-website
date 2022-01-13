@@ -9,6 +9,7 @@ const App = () => {
 
     const Header = loadable(() => import('../../components/Header'));
     const Footer = loadable(() => import('../../components/Footer'));
+    const Banner = loadable(() => import('../../components/Banner'));
     const Home = loadable(() => import('../Home'));
 
     return (
@@ -21,6 +22,7 @@ const App = () => {
                             <Routes>
                                 <Route exact path="/" element={<Home />} />
                             </Routes>
+                            <Banner />
                             <Footer />
                         </Router>
                     </AppContextProvider>

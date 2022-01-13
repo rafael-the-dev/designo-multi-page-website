@@ -7,6 +7,9 @@ export const useBackground = makeStyles(theme => ({
     contain: {
         backgroundSize: 'contain'
     },
+    cover: {
+        backgroundSize: 'cover'
+    },
     noRepeat: {
         backgroundRepeat: 'no-repeat'
     },
