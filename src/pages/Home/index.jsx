@@ -17,7 +17,7 @@ const Home = () => {
 
     return (
         <>
-            <div className={classNames(classes.projectsGrid, display.px, display.mb3)}>
+            <div className={classNames(classes.projectsGrid, display.px)}>
                 <div className={classNames(display.alignCenter, display.flex, display.flexColumn, display.justifyCenter, classes.project, bg.noReapeat, bg.center, bg.cover, classes.webDesign)}>
                     <Typography component="h2" variant="h6" className={classNames(text.font7, text.textLight)}>
                         Web Design
@@ -49,7 +49,7 @@ const Home = () => {
                     </Link>
                 </div>
             </div>
-            <Grid container className={classNames(display.px)}>
+            <Grid container className={classNames(display.px, classes.cardsSection)}>
                 <Card 
                     description="Each project starts with an in-depth brand research to ensure we only create products that serve a purpose. We merge art, design, and technology into exciting new solutions."
                     image={passionaleIllustration}

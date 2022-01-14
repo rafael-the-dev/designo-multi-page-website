@@ -4,8 +4,14 @@ export const useStyles = makeStyles(theme => ({
     footer: {
         backgroundColor: '#1D1C1E',
         padding: '15rem 3% 2.3rem 3%',
+        [theme.breakpoints.up(788)]: {
+            padding: '15rem 5% 2.3rem 5%',
+        },
         [theme.breakpoints.up(900)]: {
-            padding: '10rem 3% 2.3rem 3%',
+            padding: '10rem 8% 2.3rem 8%',
+        },
+        [theme.breakpoints.up('md')]: {
+            padding: '10rem 10% 2.3rem 10%',
         }
     },
     logoContainer: {

@@ -62,6 +62,15 @@ export const useStyles = makeStyles(theme => ({
         color: '#E7816B !important',
         fontSize: '1rem !important'
     },
+    cardsSection: {
+        transform: 'translate(0px, 10%)',
+        [theme.breakpoints.up('sm')]: {
+            transform: 'translate(0px, 13%)'
+        },
+        [theme.breakpoints.up(900)]: {
+            transform: 'translate(0px, 7%)'
+        }
+    },
     resourcefulAvatar: {
         "&::before": {
             transform: 'rotate(290deg)'
