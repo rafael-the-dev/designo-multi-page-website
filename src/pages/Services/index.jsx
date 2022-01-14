@@ -1,9 +1,11 @@
-import { Typography } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import classNames from "classnames";
 import { useBackground, useDisplay, useResponsive, useTypography } from '../../styles';
 import { useStyles } from './styles'
 import Card from './Card'
 import expressImage from '../../assets/images/services/image-express.jpg'
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { Link } from 'react-router-dom'
 
 const Services = () => {
     const bg = useBackground();
@@ -58,6 +60,28 @@ const Services = () => {
                     image={expressImage}
                     title="Express"
                 />
+            </div>
+            <div className={classNames(classes.projectsGrid, display.px, display.mt3, display.pt1, responsive.mdPt2, responsive.mdMb2)}>
+                <div className={classNames(display.alignCenter, display.flex, display.flexColumn, display.justifyCenter, classes.project, bg.noReapeat, bg.center, bg.cover, classes.webDesign)}>
+                    <Typography component="h2" variant="h6" className={classNames(text.font7, text.textLight)}>
+                        Web Design
+                    </Typography>
+                    <Link to="/" className={classNames(display.mt1, display, text.noUnderline)}>
+                        <Button className={classNames(text.textLight)} endIcon={<ArrowForwardIosIcon className={classNames(classes.rightArrow)} />}>
+                            View projects
+                        </Button>
+                    </Link>
+                </div>
+                <div className={classNames(display.alignCenter, display.flex, display.flexColumn, display.justifyCenter, classes.project, bg.noReapeat, bg.center, bg.cover, classes.appDesign)}>
+                    <Typography component="h2" variant="h6" className={classNames(text.font7, text.textLight)}>
+                        App Design
+                    </Typography>
+                    <Link to="/" className={classNames(display.mt1, display, text.noUnderline)}>
+                        <Button className={classNames(text.textLight)} endIcon={<ArrowForwardIosIcon className={classNames(classes.rightArrow)} />}>
+                            View projects
+                        </Button>
+                    </Link>
+                </div>
             </div>
         </>
     );
