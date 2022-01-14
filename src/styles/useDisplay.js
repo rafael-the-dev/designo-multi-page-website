@@ -190,8 +190,8 @@ export const useDisplay = makeStyles(theme => ({
             paddingRight: '5% !important',
         },
         [theme.breakpoints.up('md')]: {
-            paddingLeft: '5% !important',
-            paddingRight: '5% !important',
+            paddingLeft: '10% !important',
+            paddingRight: '10% !important',
         }
     },
     relative: {
