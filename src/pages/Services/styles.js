@@ -32,5 +32,12 @@ export const useStyles = makeStyles(theme => ({
         [theme.breakpoints.up('md')]: {
             maxWidth: '50%'
         }
+    },
+    cardsContainer: {
+        display: 'grid',
+        gridRowGap: 36,
+        gridTemplateColumns: '100%',
+        gridTemplateRows: 'auto auto auto auto auto auto',
+        transform: 'translate(0, 3%)'
     }
 }));

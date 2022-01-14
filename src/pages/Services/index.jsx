@@ -2,7 +2,8 @@ import { Typography } from "@mui/material";
 import classNames from "classnames";
 import { useBackground, useDisplay, useResponsive, useTypography } from '../../styles';
 import { useStyles } from './styles'
-
+import Card from './Card'
+import expressImage from '../../assets/images/services/image-express.jpg'
 
 const Services = () => {
     const bg = useBackground();
@@ -26,6 +27,38 @@ const Services = () => {
                     </Typography>
                 </div>
             </section>
+            <div className={classNames(display.px, classes.cardsContainer)}>
+                <Card 
+                    description="A multi-carrier shipping website for ecommerce businesses"
+                    image={expressImage}
+                    title="Express"
+                />
+                <Card 
+                    description="A multi-carrier shipping website for ecommerce businesses"
+                    image={expressImage}
+                    title="Express"
+                />
+                <Card 
+                    description="A multi-carrier shipping website for ecommerce businesses"
+                    image={expressImage}
+                    title="Express"
+                />
+                <Card 
+                    description="A multi-carrier shipping website for ecommerce businesses"
+                    image={expressImage}
+                    title="Express"
+                />
+                <Card 
+                    description="A multi-carrier shipping website for ecommerce businesses"
+                    image={expressImage}
+                    title="Express"
+                />
+                <Card 
+                    description="A multi-carrier shipping website for ecommerce businesses"
+                    image={expressImage}
+                    title="Express"
+                />
+            </div>
         </>
     );
 };
