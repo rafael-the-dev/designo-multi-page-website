@@ -16,7 +16,8 @@ const Services = () => {
             <section className={classNames(display.px,)}>
                 <div className={classNames(display.w100, display.flex, display.flexColumn, display.alignCenter, 
                     bg.noRepeat, classes.hero, display.justifyCenter, bg.cover)}>
-                    <Typography component="h1" variant="h5" className={classNames(text.textLight, text.alignCenter )}>
+                    <Typography component="h1" variant="h5" className={classNames(text.textLight, text.alignCenter,
+                        text.font7, classes.heroTitle )}>
                         Web Design
                     </Typography>
                     <Typography className={classNames(text.textLight, text.alignCenter, text.rem9, display.mt1,

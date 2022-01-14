@@ -14,11 +14,23 @@ export const useStyles = makeStyles(theme => ({
             backgroundImage: `url(${heroPatternTablet})`,
             backgroundPosition: 'right -43px center',
             height: 250,
+        },
+        [theme.breakpoints.up('md')]: {
+            height: 285,
+        }
+    },
+    heroTitle: {
+        [theme.breakpoints.up('sm')]: {
+            fontSize: '2.35rem !important'
         }
     },
     heroDescription: {
         [theme.breakpoints.up('sm')]: {
-            maxWidth: '70%'
+            fontSize: '1.02rem !important',
+            maxWidth: '70%',
+        },
+        [theme.breakpoints.up('md')]: {
+            maxWidth: '50%'
         }
     }
 }));
