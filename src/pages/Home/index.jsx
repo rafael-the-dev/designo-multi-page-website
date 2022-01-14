@@ -20,7 +20,8 @@ const Home = () => {
         <>
             <section className={classNames(display.px, display.mb3)}>
                 <div className={classNames(display.flex, display.alignCenter, display.flexColumn, bg.noRepeat,
-                     classes.hero, display.pt2, responsive.smPt3, responsive.mdAlignStart, responsive.mdJustifyCenter)} >
+                     classes.hero, display.pt2, responsive.smPt3, responsive.mdAlignStart, responsive.mdJustifyCenter,
+                     responsive.mdPt0)} >
                     <Typography 
                         gutterBottom 
                         component="h2" 
