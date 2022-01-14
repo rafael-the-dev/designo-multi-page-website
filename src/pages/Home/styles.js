@@ -24,7 +24,22 @@ export const useStyles = makeStyles(theme => ({
         borderRadius: 15,
         height: 626,
         paddingLeft: '3%',
-        paddingRight: '3%'
+        paddingRight: '3%',
+        [theme.breakpoints.up('md')]: {
+            backgroundPosition: 'right bottom -288px, right -105px center',
+            height: 450,
+            paddingLeft: '5%',
+            paddingRight: '5%',
+        },
+        [theme.breakpoints.up(1200)]: {
+            backgroundPosition: 'right bottom -241px, right -105px center',
+            height: 460,
+        }
+    },
+    heroDescription: {
+        [theme.breakpoints.up('md')]: {
+            maxWidth: '55%'
+        }
     },
     heroButton: {
         backgroundColor: '#FFF !important'

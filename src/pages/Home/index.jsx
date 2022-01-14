@@ -3,9 +3,9 @@ import Card from './Card';
 import passionaleIllustration from '../../assets/images/home/illustration-passionate.svg'
 import resourcefulIllustration from '../../assets/images/home/illustration-resourceful.svg'
 import friendlyIllustration from '../../assets/images/home/illustration-friendly.svg'
-import classNames from 'classnames'; /*useResponsive*/
+import classNames from 'classnames'; /**/
 import { useStyles } from './styles'
-import { useBackground, useDisplay, useTypography } from '../../styles';
+import { useBackground, useDisplay, useResponsive, useTypography } from '../../styles';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { Link } from 'react-router-dom'
 
@@ -13,18 +13,23 @@ const Home = () => {
     const bg = useBackground();
     const display = useDisplay();
     const classes = useStyles();
+    const responsive = useResponsive();
     const text = useTypography();
 
     return (
         <>
             <section className={classNames(display.px, display.mb3)}>
                 <div className={classNames(display.flex, display.alignCenter, display.flexColumn, bg.noRepeat,
-                     classes.hero, display.pt2, )} >
-                    <Typography gutterBottom component="h2" variant="h5" className={classNames(text.alignCenter, text.textLight, display.opacity9)}>
+                     classes.hero, display.pt2, responsive.smPt3, responsive.mdAlignStart, responsive.mdJustifyCenter)} >
+                    <Typography 
+                        gutterBottom 
+                        component="h2" 
+                        variant="h5" 
+                        className={classNames(text.alignCenter, text.textLight, display.opacity9, text.mdAlignLeft)}>
                         Award-winning custom<br />designs and digital<br />branding solutions
                     </Typography>
                     <Typography className={classNames(text.alignCenter, text.textLight, display.opacity8, 
-                        text.rem9, display.mt1)}>
+                        text.rem9, display.mt1, text.mdAlignLeft, classes.heroDescription)}>
                         With over 10 years in the industry, we are experienced in creating fully responsive 
                         websites, apps, and engaging brand experiences. Find out more about our services.
                     </Typography>
