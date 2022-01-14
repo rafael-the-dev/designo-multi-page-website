@@ -1,5 +1,7 @@
 import { makeStyles } from "@mui/styles";
 import heroImage from '../../assets/images/home/image-hero-phone.png';
+import heroPattern from '../../assets/images/pattern/bg-pattern-hero-home.svg';
+
 import webDesignMobile from '../../assets/images/home/mobile/image-web-design.jpg'
 import appDesignMobile from '../../assets/images/home/mobile/image-app-design.jpg'
 import graphicDesignMobile from '../../assets/images/home/mobile/image-graphic-design.jpg'
@@ -16,13 +18,16 @@ const linearGradient = 'linear-gradient(to bottom, rgba(0, 0, 0, .1), rgba(0, 0,
 export const useStyles = makeStyles(theme => ({
     hero: {
         backgroundColor: '#E7816B',
-        backgroundImage: `url(${heroImage})`,
-        backgroundPosition: 'center bottom -288px',
-        backgroundSize: 478,
+        backgroundImage: `url(${heroImage}), url(${heroPattern})`,
+        backgroundPosition: 'center bottom -288px, right -105px center',
+        backgroundSize: '478px, 441px',
         borderRadius: 15,
         height: 626,
         paddingLeft: '3%',
         paddingRight: '3%'
+    },
+    heroButton: {
+        backgroundColor: '#FFF !important'
     },
     projectsGrid: {
         display: 'grid',

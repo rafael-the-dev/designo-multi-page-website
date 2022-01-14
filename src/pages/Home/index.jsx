@@ -29,7 +29,7 @@ const Home = () => {
                         websites, apps, and engaging brand experiences. Find out more about our services.
                     </Typography>
                     <Link to="/" className={classNames(text.noUnderline, display.mt1)}>
-                        <Button variant="contained">Learn more</Button>
+                        <Button variant="contained" className={classNames(text.textDark, classes.heroButton)}>Learn more</Button>
                     </Link>
                 </div>
             </section>
