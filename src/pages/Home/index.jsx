@@ -17,6 +17,22 @@ const Home = () => {
 
     return (
         <>
+            <section className={classNames(display.px, display.mb3)}>
+                <div className={classNames(display.flex, display.alignCenter, display.flexColumn, bg.noRepeat,
+                     classes.hero, display.pt2, )} >
+                    <Typography gutterBottom component="h2" variant="h5" className={classNames(text.alignCenter, text.textLight, display.opacity9)}>
+                        Award-winning custom<br />designs and digital<br />branding solutions
+                    </Typography>
+                    <Typography className={classNames(text.alignCenter, text.textLight, display.opacity8, 
+                        text.rem9, display.mt1)}>
+                        With over 10 years in the industry, we are experienced in creating fully responsive 
+                        websites, apps, and engaging brand experiences. Find out more about our services.
+                    </Typography>
+                    <Link to="/" className={classNames(text.noUnderline, display.mt1)}>
+                        <Button variant="contained">Learn more</Button>
+                    </Link>
+                </div>
+            </section>
             <div className={classNames(classes.projectsGrid, display.px)}>
                 <div className={classNames(display.alignCenter, display.flex, display.flexColumn, display.justifyCenter, classes.project, bg.noReapeat, bg.center, bg.cover, classes.webDesign)}>
                     <Typography component="h2" variant="h6" className={classNames(text.font7, text.textLight)}>
