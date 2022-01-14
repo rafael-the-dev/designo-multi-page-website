@@ -24,7 +24,7 @@ export const useStyles = makeStyles(theme => ({
             transform: 'translate(0px, 36%)',
         },
         [theme.breakpoints.up(1200)]: {
-            width: '75%'
+            width: '80%'
         }
     },
     bannerContent: {
