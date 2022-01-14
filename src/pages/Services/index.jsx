@@ -27,7 +27,7 @@ const Services = () => {
                     </Typography>
                 </div>
             </section>
-            <div className={classNames(display.px, classes.cardsContainer)}>
+            <div className={classNames(display.px, classes.cardsContainer, responsive.mdMt2)}>
                 <Card 
                     description="A multi-carrier shipping website for ecommerce businesses"
                     image={expressImage}

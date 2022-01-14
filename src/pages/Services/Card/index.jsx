@@ -10,7 +10,8 @@ const Card = ({ description, image, title }) => {
     const text = useTypography();
 
     return (
-        <article className={classNames(display.flex, display.flexColumn, classes.card, responsive.smRow, display.alignStretch)}>
+        <article className={classNames(display.flex, display.flexColumn, classes.card, responsive.smRow, 
+            display.alignStretch, responsive.mdColumn)}>
             <div className={classNames(classes.cardImageContainer)}> 
                 <img 
                     src={image}

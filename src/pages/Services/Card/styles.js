@@ -11,12 +11,19 @@ export const useStyles = makeStyles(theme => ({
         [theme.breakpoints.up('sm')]: {
             borderRadius: '15px 0 0 15px',
             width: '60%'
+        },
+        [theme.breakpoints.up('md')]: {
+            borderRadius: '15px 15px 0 0',
+            width: '100%'
         }
     },
     cardImage: {
         borderRadius: '15px 15px 0 0',
         [theme.breakpoints.up('sm')]: {
             borderRadius: '15px 0 0 15px',
+        },
+        [theme.breakpoints.up('md')]: {
+            borderRadius: '15px 15px 0 0',
         }
     },
     cardContent: {
@@ -27,6 +34,11 @@ export const useStyles = makeStyles(theme => ({
         [theme.breakpoints.up('sm')]: {
             borderRadius: '0 15px 15px 0',
             width: '40%'
+        },
+        [theme.breakpoints.up('md')]: {
+            borderRadius: '0 0 15px 15px',
+            boxSizing: 'border-box',
+            width: '100%'
         }
     },
     cardTitle: {

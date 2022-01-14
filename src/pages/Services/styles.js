@@ -38,6 +38,12 @@ export const useStyles = makeStyles(theme => ({
         gridRowGap: 36,
         gridTemplateColumns: '100%',
         gridTemplateRows: 'auto auto auto auto auto auto',
-        transform: 'translate(0, 3%)'
+        transform: 'translate(0, 3%)',
+        [theme.breakpoints.up('md')]: {
+            gridColumnGap: '2%',
+            gridTemplateColumns: '32% 32% 32%',
+            gridTemplateRows: 'auto auto',
+            transform: 'translate(0, 4%)',
+        }
     }
 }));
