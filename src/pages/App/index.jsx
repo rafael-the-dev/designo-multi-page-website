@@ -11,6 +11,7 @@ const App = () => {
     const Footer = loadable(() => import('../../components/Footer'));
     const Banner = loadable(() => import('../../components/Banner'));
     const Home = loadable(() => import('../Home'));
+    const Services = loadable(() => import('../Services'));
 
     return (
         <>
@@ -20,6 +21,7 @@ const App = () => {
                         <Router>
                             <Header />
                             <Routes>
+                                <Route exact path="/services/:id" element={<Services />} />
                                 <Route exact path="/" element={<Home />} />
                             </Routes>
                             <Banner />
