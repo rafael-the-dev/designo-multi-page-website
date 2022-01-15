@@ -44,7 +44,7 @@ const Home = () => {
                     <Typography component="h2" variant="h6" className={classNames(text.font7, text.textLight)}>
                         Web Design
                     </Typography>
-                    <Link to="/" className={classNames(display.mt1, display, text.noUnderline)}>
+                    <Link to="/services/web-design" className={classNames(display.mt1, display, text.noUnderline)}>
                         <Button className={classNames(text.textLight)} endIcon={<ArrowForwardIosIcon className={classNames(classes.rightArrow)} />}>
                             View projects
                         </Button>
@@ -54,7 +54,7 @@ const Home = () => {
                     <Typography component="h2" variant="h6" className={classNames(text.font7, text.textLight)}>
                         App Design
                     </Typography>
-                    <Link to="/" className={classNames(display.mt1, display, text.noUnderline)}>
+                    <Link to="/services/app-design" className={classNames(display.mt1, display, text.noUnderline)}>
                         <Button className={classNames(text.textLight)} endIcon={<ArrowForwardIosIcon className={classNames(classes.rightArrow)} />}>
                             View projects
                         </Button>
@@ -64,7 +64,7 @@ const Home = () => {
                     <Typography component="h2" variant="h6" className={classNames(text.font7, text.textLight)}>
                         Graphic Design
                     </Typography>
-                    <Link to="/" className={classNames(display.mt1, display, text.noUnderline)}>
+                    <Link to="/services/graphic-design" className={classNames(display.mt1, display, text.noUnderline)}>
                         <Button className={classNames(text.textLight)} endIcon={<ArrowForwardIosIcon className={classNames(classes.rightArrow)} />}>
                             View projects
                         </Button>

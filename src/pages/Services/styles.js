@@ -107,4 +107,8 @@ export const useStyles = makeStyles(theme => ({
             backgroundImage: `${linearGradient}, url(${graphicDesignDesktop})`,
         }
     },
+    rightArrow: {
+        color: '#E7816B !important',
+        fontSize: '1rem !important'
+    },
 }));
