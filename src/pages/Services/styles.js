@@ -34,6 +34,7 @@ export const useStyles = makeStyles(theme => ({
         }
     },
     heroTitle: {
+        textTransform: 'capitalize',
         [theme.breakpoints.up('sm')]: {
             fontSize: '2.35rem !important'
         }

@@ -42,6 +42,39 @@
             }
         ]
     },
+    "graphic-design": {
+        "title": "Graphic design",
+        "description": "We deliver eye-catching branding materials that are tailored to meet your business objectives.",
+        "others services": [
+            {
+                "key": "app-design",
+                "title": "App design",
+                "link": "app-design"
+            },
+            {
+                "key": "web-design",
+                "title": "Web design",
+                "link": "web-design"
+            }
+        ],
+        "cards": [
+            {
+                "description": "A book cover designed for Tim Brown’s new release, ‘Change’",
+                "key": "change-card",
+                "title": "Tim brown"
+            },
+            {
+                "description": "A simple packaging concept made for Boxed Water",
+                "key": "boxed-water-card",
+                "title": "Boxed Water"
+            },
+            {
+                "description": "A poster made in collaboration with the Federal Art Project",
+                "key": "science-card",
+                "title": "Science"
+            }
+        ]
+    },
     "web-design": {
         "title": "Web design",
         "description": "We build websites that serve as powerful marketing tools and bring memorable brand experiences.",
