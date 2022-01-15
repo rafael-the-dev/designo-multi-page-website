@@ -1,4 +1,47 @@
 {
+    "app-design": {
+        "title":"App design",
+        "description": "Our mobile designs bring intuitive digital solutions to your customers right at their fingertips",
+        "others services": [
+            {
+                "key": "web-design",
+                "title": "Web design",
+                "link": "web-design"
+            },
+            {
+                "key": "graphic-design",
+                "title": "Graphic design",
+                "link": "graphic-design"
+            }
+        ],
+        "cards": [
+            {
+                "description": "Solving the problem of poor indoor air quality by filtering the air",
+                "key": "airfilter-card",
+                "title": "Airfilter"
+            },
+            {
+                "description": "Product that lets you edit your favorite photos and videos at any time",
+                "key": "eyecam-card",
+                "title": "Eyecam"
+            },
+            {
+                "description": "Get to meet your favorite internet superstar with the faceit app",
+                "key": "faceit-card",
+                "title": "Faceit"
+            },
+            {
+                "description": "A todo app that features cloud sync with light and dark mode",
+                "key": "todo-card",
+                "title": "Todo"
+            },
+            {
+                "description": "A VR experience app made for Loopstudios",
+                "key": "loopstudios-card",
+                "title": "Loopstudios"
+            }
+        ]
+    },
     "web-design": {
         "title": "Web design",
         "description": "We build websites that serve as powerful marketing tools and bring memorable brand experiences.",

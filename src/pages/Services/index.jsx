@@ -6,7 +6,7 @@ import Card from './Card'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { Link } from 'react-router-dom';
 import data from '../../services-data.json';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';  
 import { useParams } from 'react-router-dom';
 
 import expressImage from '../../assets/images/services/web-design/image-express.jpg'
@@ -15,6 +15,16 @@ import photonImage from '../../assets/images/services/web-design/image-photon.jp
 import blogrImage from '../../assets/images/services/web-design/image-blogr.jpg'
 import builderImage from '../../assets/images/services/web-design/image-builder.jpg'
 import campImage from '../../assets/images/services/web-design/image-camp.jpg'
+
+import airfilterImage from '../../assets/images/services/app-design/image-airfilter.jpg'
+import eyecamImage from '../../assets/images/services/app-design/image-eyecam.jpg'
+import faceitImage from '../../assets/images/services/app-design/image-faceit.jpg'
+import loopstudiosImage from '../../assets/images/services/app-design/image-loopstudios.jpg'
+import todoImage from '../../assets/images/services/app-design/image-todo.jpg'
+
+import boxedWaterImage from '../../assets/images/services/graphic-design/image-boxed-water.jpg'
+import changeImage from '../../assets/images/services/graphic-design/image-change.jpg'
+import scienceImage from '../../assets/images/services/graphic-design/image-science.jpg'
 
 const Services = () => {
     const bg = useBackground();
@@ -40,11 +50,19 @@ const Services = () => {
     });
 
     const cardsImages = useRef({
+        "airfilter-card": airfilterImage,
         "blogr-card": blogrImage,
+        "boxed-water-card": boxedWaterImage,
         "builder-card": builderImage,
         "camp-card": campImage,
+        "change-card": changeImage,
+        "eyecam-card": eyecamImage,
         "express-card": expressImage,
+        "faceit-card": faceitImage,
+        "loopstudios-card": loopstudiosImage,
         "photon-card": photonImage,
+        "science-card": scienceImage,
+        "todo-card": todoImage,
         "transfer-card": transferImage
     })
 
