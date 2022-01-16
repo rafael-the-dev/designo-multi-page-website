@@ -10,7 +10,8 @@ const App = () => {
     const Header = loadable(() => import('../../components/Header'));
     const Footer = loadable(() => import('../../components/Footer'));
     const Banner = loadable(() => import('../../components/Banner'));
-    const Home = loadable(() => import('../Home'));
+    const HomePage = loadable(() => import('../Home'));
+    const LocationsPage = loadable(() => import('../Locations'));
     const Services = loadable(() => import('../Services'));
 
     return (
@@ -22,7 +23,8 @@ const App = () => {
                             <Header />
                             <Routes>
                                 <Route exact path="/services/:id" element={<Services />} />
-                                <Route exact path="/" element={<Home />} />
+                                <Route exact path="/locations" element={<LocationsPage />} />
+                                <Route exact path="/" element={<HomePage />} />
                             </Routes>
                             <Banner />
                             <Footer />
