@@ -22,6 +22,7 @@ const Locations = () => {
             <Card
                 address1={<>3886 Wellington Street<br/>Toronto, Ontario M9C 3J5</>}
                 address2={<>P : +1 253-863-8967<br/>M : contact@designo.co</>}
+                countryName="Canada"
                 mobileImage={canadaMobileImage}
                 desktopImage={canadaDesktopImage}
                 title1="Designo Central Office"
@@ -30,14 +31,16 @@ const Locations = () => {
              <Card
                 address1={<>19 Balonne Street<br/>New South Wales 2443</>}
                 address2={<>P : (02) 6720 9092<br/>M : contact@designo.au</>}
+                countryName="Australia"
                 mobileImage={australiaMobileImage}
                 desktopImage={australiaDesktopImage}
                 title1="Designo AU Office"
                 title2="Contact"
              />
-             <cardActionAreaClasses
+             <Card
                 address1={<>13  Colorado Way<br/>Rhyd-y-fro SA8 9GA</>}
                 address2={<>P : 078 3115 1400<br/>M : contact@designo.uk</>}
+                countryName="United Kingdom"
                 mobileImage={unitedKingdomMobileImage}
                 desktopImage={unitedKingdomDesktopImage}
                 title1="Designo UK Office"
