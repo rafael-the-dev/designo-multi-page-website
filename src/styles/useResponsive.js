@@ -141,6 +141,21 @@ export const useResponsive = makeStyles(theme => ({
             marginLeft: '2rem !important'
         }
     },
+    smMl3: {
+        [theme.breakpoints.up('sm')]: {
+            marginLeft: '3rem !important'
+        }
+    },
+    smPl2: {
+        [theme.breakpoints.up('sm')]: {
+            paddingLeft: '2rem !important'
+        }
+    },
+    smPr2: {
+        [theme.breakpoints.up('sm')]: {
+            paddingRight: '2rem !important'
+        }
+    },
     smPt3: {
         [theme.breakpoints.up('sm')]: {
             paddingTop: '3rem !important'

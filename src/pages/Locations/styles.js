@@ -6,7 +6,8 @@ export const useStyles = makeStyles(theme => ({
         gridTemplateColumns: '100%',
         gridTemplateRows: 'auto auto auto auto auto auto',
         [theme.breakpoints.up('sm')]: {
-
+            paddingLeft: '5%',
+            paddingRight: '5%'
         }
     }
 }));

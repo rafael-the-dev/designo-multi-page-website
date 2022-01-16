@@ -3,9 +3,14 @@ import bgPattern from '../../../assets/images/pattern/bg-pattern-three-circles.s
 
 export const useStyles = makeStyles(theme => ({
     cardImageContainer: {
-        height: 250
+        height: 250,
+        [theme.breakpoints.up('sm')]: {
+            borderRadius: 15,
+            marginBottom: '1.5rem',
+        }
     },
     cardImage: {
+        borderRadius: 15,
         objectFit: 'cover'
     },
     cardContent: {
@@ -14,7 +19,8 @@ export const useStyles = makeStyles(theme => ({
         backgroundSize: 'cover',
         marginBottom: '2rem',
         [theme.breakpoints.up('sm')]: {
-            marginBottom: 0
+            borderRadius: 15,
+            marginBottom: '5rem',
         }
     },
     cardTitle: {
