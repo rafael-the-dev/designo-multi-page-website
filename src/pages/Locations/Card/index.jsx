@@ -13,13 +13,13 @@ const Card = ({ mobileImage, desktopImage, address1, address2, title1, title2 })
         <img 
             src={image}
             alt="" 
-            className={classNames(display.block, display.h100, display.w100)} 
+            className={classNames(classes.cardImage, display.block, display.h100, display.w100)} 
         />
-    ), [ display ])
+    ), [ classes, display ])
 
     return (
         <>
-            <div className={classNames()}>
+            <div className={classNames(classes.cardImageContainer)}>
                 <Hidden mdUp>{ imageMemo(mobileImage) }</Hidden>
                 <Hidden mdDown>{ imageMemo(desktopImage) }</Hidden>
             </div>
