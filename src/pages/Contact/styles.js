@@ -40,11 +40,18 @@ export const useStyles = makeStyles(theme => ({
     inputColor: {
         color: '#ffffffcf'
     },
+    formErrorIcon: {
+        marginLeft: 7
+    },
     formButton: {
         backgroundColor: '#FFF !important',
         marginLeft: 'auto !important',
         marginRight: 'auto !important',
         padding: '8px 43px !important',
+        '&:hover': {
+            backgroundColor: '#FFAD9B !important',
+            color: '#FFF !important'
+        },
         [theme.breakpoints.up('sm')]: {
             marginRight: '0 !important',
         }

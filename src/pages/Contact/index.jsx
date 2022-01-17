@@ -48,7 +48,7 @@ const Contact = () => {
                                 {...register("name-field", { required: true })}
                             />
                             { errors["name-field"] && <label htmlFor='name-field' className={classNames(text.textLight, display.flex, display.alignCenter, text.rem8)}>
-                                Can't be empty <ErrorIcon />
+                                Can't be empty <ErrorIcon classes={{ root: classes.formErrorIcon}} />
                             </label> }
                         </div>
                         <div className={classNames(display.alignCenter, display.flex, display.w100, classes.inputGroup,
@@ -60,7 +60,7 @@ const Contact = () => {
                                 {...register("email-field", { required: true })}
                             />
                             { errors["email-field"] && <label htmlFor='email-field' className={classNames(text.textLight, display.flex, display.alignCenter, text.rem8)}>
-                                Can't be empty <ErrorIcon />
+                                Can't be empty <ErrorIcon classes={{ root: classes.formErrorIcon}} />
                             </label>}
                         </div>
                         <div className={classNames(display.alignCenter, display.flex, display.w100, classes.inputGroup,
@@ -72,7 +72,7 @@ const Contact = () => {
                                 {...register("phone-field", { required: true })}
                             />
                             {errors["phone-field"] && <label htmlFor='phone-field' className={classNames(text.textLight, display.flex, display.alignCenter, text.rem8)}>
-                                Can't be empty <ErrorIcon />
+                                Can't be empty <ErrorIcon classes={{ root: classes.formErrorIcon}} />
                             </label> }
                         </div>
                         <div className={classNames(display.alignCenter, display.flex, display.w100, classes.inputGroup,
@@ -85,7 +85,7 @@ const Contact = () => {
                                 {...register("message-field", { required: true })}
                             ></textarea>
                             {errors["message-field"] && <label htmlFor='message-field' className={classNames(text.textLight, display.flex, display.alignCenter, text.rem8)}>
-                                Can't be empty <ErrorIcon />
+                                Can't be empty <ErrorIcon classes={{ root: classes.formErrorIcon}} />
                             </label> }
                         </div>
                         <Button type='submit' variant="contained" className={classNames(classes.formButton, display.mt2, 

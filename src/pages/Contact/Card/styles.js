@@ -15,6 +15,9 @@ export const useStyles = makeStyles(theme => ({
     },
     cardButton: {
         backgroundColor: '#E7816B !important',
-        padding: '8px 16px !important'
+        padding: '8px 16px !important',
+        '&:hover': {
+            backgroundColor: '#FFAD9B !important',
+        }
     }
 }));
