@@ -23,7 +23,7 @@ const Contact = () => {
     return (
         <>
             <section className={classNames(display.px)}>
-                <div className={classNames(classes.hero, bg.noRepeat, responsive.mdAlignCenter)}>
+                <div className={classNames(classes.hero, bg.noRepeat, responsive.mdAlignCenter, responsive.mdJustifyBetween)}>
                     <div className={classNames(classes.heroContent)}>
                         <Typography 
                             component="h2" 
