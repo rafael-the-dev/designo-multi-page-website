@@ -1,6 +1,7 @@
 import { makeStyles } from "@mui/styles";
 import heroImage from '../../assets/images/about/mobile/image-about-hero.jpg'
 import heroBgPattern from '../../assets/images/about/mobile/bg-pattern-hero-about-mobile.svg'
+import worldClassTalentImage from '../../assets/images/about/mobile/image-world-class-talent.jpg'
 
 
 import heroImageTablet from '../../assets/images/about/tablet/image-about-hero.jpg'
@@ -45,8 +46,7 @@ export const useStyles = makeStyles(theme => ({
     heroContent: {
         backgroundImage: `url(${heroBgPattern})`,
         backgroundPosition: 'right 2px top -140px',
-        paddingBottom: '4rem',
-        paddingTop: '4rem',
+        padding: '4rem 5%',
         [theme.breakpoints.up('sm')]: {
             backgroundPosition: 'left -818px top -230px',
             backgroundSize: 1200,
@@ -57,10 +57,12 @@ export const useStyles = makeStyles(theme => ({
             backgroundPosition: 'left -99px top -214px',
             backgroundSize: 500,
             maxWidth: '48%',
-            paddingLeft: '5%'
+            paddingLeft: '5%',
+            paddingRight: 0
         }
     },
     description: {
+        lineHeight: '1.7rem !important',
         [theme.breakpoints.up('sm')]: {
             marginLeft: 'auto !important',
             marginRight: 'auto !important',
@@ -71,5 +73,22 @@ export const useStyles = makeStyles(theme => ({
             marginRight: '0 !important',
             maxWidth: '100%'
         }
+    },
+    details: {
+        backgroundColor: '#FDF3F0',
+        [theme.breakpoints.up('sm')]: {
+            borderRadius: 15,
+        },
+    },
+    detailsImageContainer: {
+        backgroundImage: `url(${worldClassTalentImage})`,
+        height: 390,
+        objectFit: 'cover',
+    },
+    detailsContent: {
+        padding: '4rem 5%',
+    },
+    detailsTitle: {
+        color: '#E7816B'
     }
 }));
