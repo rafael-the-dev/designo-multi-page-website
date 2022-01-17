@@ -7,6 +7,9 @@ export const useStyles = makeStyles(theme => ({
         [theme.breakpoints.up('sm')]: {
             borderRadius: 15,
             marginBottom: '1.5rem',
+        },
+        [theme.breakpoints.up('md')]: {
+            marginBottom: 0,
         }
     },
     cardImage: {
@@ -21,6 +24,9 @@ export const useStyles = makeStyles(theme => ({
         [theme.breakpoints.up('sm')]: {
             borderRadius: 15,
             marginBottom: '5rem',
+        },
+        [theme.breakpoints.up('md')]: {
+            marginBottom: 0,
         }
     },
     cardTitle: {

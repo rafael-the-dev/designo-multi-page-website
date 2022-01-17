@@ -23,6 +23,8 @@ const Locations = () => {
                 address1={<>3886 Wellington Street<br/>Toronto, Ontario M9C 3J5</>}
                 address2={<>P : +1 253-863-8967<br/>M : contact@designo.co</>}
                 countryName="Canada"
+                contentClassName={classes.canadaContent}
+                imageClassName={classes.canadaImageContainer}
                 mobileImage={canadaMobileImage}
                 desktopImage={canadaDesktopImage}
                 title1="Designo Central Office"
@@ -32,6 +34,8 @@ const Locations = () => {
                 address1={<>19 Balonne Street<br/>New South Wales 2443</>}
                 address2={<>P : (02) 6720 9092<br/>M : contact@designo.au</>}
                 countryName="Australia"
+                contentClassName={classes.australiaContent}
+                imageClassName={classes.australiaImageContainer}
                 mobileImage={australiaMobileImage}
                 desktopImage={australiaDesktopImage}
                 title1="Designo AU Office"
@@ -41,6 +45,8 @@ const Locations = () => {
                 address1={<>13  Colorado Way<br/>Rhyd-y-fro SA8 9GA</>}
                 address2={<>P : 078 3115 1400<br/>M : contact@designo.uk</>}
                 countryName="United Kingdom"
+                contentClassName={classes.ukContent}
+                imageClassName={classes.ukImageContainer}
                 mobileImage={unitedKingdomMobileImage}
                 desktopImage={unitedKingdomDesktopImage}
                 title1="Designo UK Office"
