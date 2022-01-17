@@ -91,6 +91,11 @@ export const useResponsive = makeStyles(theme => ({
             flexDirection: 'row !important'
         }
     },
+    mdRowReverse: {
+        [theme.breakpoints.up('md')]: {
+            flexDirection: 'row-reverse !important'
+        }
+    },
     mdJustifyBetween: {
         [theme.breakpoints.up('md')]: {
             justifyContent: 'space-between !important'

@@ -5,6 +5,7 @@ import heroBgPattern from '../../assets/images/about/mobile/bg-pattern-hero-abou
 
 import heroImageTablet from '../../assets/images/about/tablet/image-about-hero.jpg'
 import heroImageDesktop from '../../assets/images/about/desktop/image-about-hero.jpg'
+import heroBgPatternDesktop from '../../assets/images/about/desktop/bg-pattern-hero-about-desktop.svg'
 
 export const useStyles = makeStyles(theme => ({
     container: {
@@ -23,6 +24,10 @@ export const useStyles = makeStyles(theme => ({
         height: 250,
         [theme.breakpoints.up('sm')]: {
             height: 320
+        },
+        [theme.breakpoints.up('md')]: {
+            height: 320,
+            width: 320
         }
     },
     heroImageContainer: {
@@ -34,6 +39,7 @@ export const useStyles = makeStyles(theme => ({
         },
         [theme.breakpoints.up('md')]: {
             backgroundImage: `url(${heroImageDesktop})`,
+            borderRadius: '0 15px 15px 0',
         }
     },
     heroContent: {
@@ -46,12 +52,24 @@ export const useStyles = makeStyles(theme => ({
             backgroundSize: 1200,
             borderRadius: '0 0 15px 15px'
         },
+        [theme.breakpoints.up('md')]: {
+            backgroundImage: `url(${heroBgPatternDesktop})`,
+            backgroundPosition: 'left -99px top -214px',
+            backgroundSize: 500,
+            maxWidth: '48%',
+            paddingLeft: '5%'
+        }
     },
     description: {
         [theme.breakpoints.up('sm')]: {
             marginLeft: 'auto !important',
             marginRight: 'auto !important',
             maxWidth: '70%'
+        },
+        [theme.breakpoints.up('md')]: {
+            marginLeft: '0 !important',
+            marginRight: '0 !important',
+            maxWidth: '100%'
         }
     }
 }));
