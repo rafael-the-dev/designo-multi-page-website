@@ -4,7 +4,7 @@ import { useBackground, useDisplay, useResponsive, useTypography } from '../../.
 import { useCallback } from 'react';
 import { useStyles } from './styles';
 
-const Card = ({ countryName, imageClassName, contentClassName, mobileImage, desktopImage, address1, address2, title1, title2 }) => {
+const Card = ({ linkRef, countryName, imageClassName, contentClassName, mobileImage, desktopImage, address1, address2, title1, title2 }) => {
     const bg = useBackground();
     const classes = useStyles();
     const display = useDisplay();
@@ -25,7 +25,7 @@ const Card = ({ countryName, imageClassName, contentClassName, mobileImage, desk
                 <Hidden mdUp>{ imageMemo(mobileImage) }</Hidden>
                 <Hidden mdDown>{ imageMemo(desktopImage) }</Hidden>
             </div>
-            <div className={classNames(display.flex, display.flexColumn, classes.cardContent,
+            <div id={linkRef} className={classNames(display.flex, display.flexColumn, classes.cardContent,
                 display.pb3, display.pt3, bg.noRepeat, responsive.smPl2, responsive.smPr2, contentClassName)}>
                 <Typography component="h2" variant="h5" className={classNames(text.font7, text.alignCenter, text.smAlignStart,
                     classes.cardTitle)}>

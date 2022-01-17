@@ -56,16 +56,19 @@ const About = () => {
                 <Card 
                     image={canadaIcon}
                     imageClassName={classes.canadaAvatar}
+                    link="canada"
                     title="Canada"
                 />
                 <Card 
                     image={australiaIcon}
                     imageClassName={classes.australiaAvatar}
+                    link="australia"
                     title="Australia"
                 />
                 <Card 
                     image={ukIcon}
                     imageClassName={classes.ukAvatar}
+                    link="united-kingdom"
                     title="United Kingdom"
                 />
             </Grid>

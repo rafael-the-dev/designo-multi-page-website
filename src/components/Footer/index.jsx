@@ -33,17 +33,17 @@ const Footer = () => {
                 <nav className={classNames(classes.footerNav)}>
                     <ul className={classNames(display.flex, display.flexColumn, display.alignCenter, responsive.smRow)}>
                         <li  className={classNames(classes.headerListItem)}>
-                            <Link to="/" className={classNames(text.noUnderline, text.uppercase, text.textLight, display.opacity8)}>
+                            <Link to="/about-us" className={classNames(text.noUnderline, classes.footerLink, text.uppercase, text.textLight, display.opacity8)}>
                                 Our company
                             </Link>
                         </li>
                         <li  className={classNames(classes.headerListItem)}>
-                            <Link to="/" className={classNames(text.noUnderline, text.uppercase, text.textLight, display.opacity8)}>
+                            <Link to="/locations" className={classNames(text.noUnderline, classes.footerLink, text.uppercase, text.textLight, display.opacity8)}>
                                 Locations
                             </Link>
                         </li>
                         <li  className={classNames(classes.headerListItem)}>
-                            <Link to="/" className={classNames(text.noUnderline, text.uppercase, text.textLight, display.opacity8)}>
+                            <Link to="/contact" className={classNames(text.noUnderline, classes.footerLink, text.uppercase, text.textLight, display.opacity8)}>
                                 Contact
                             </Link>
                         </li>
@@ -67,7 +67,7 @@ const Footer = () => {
                         </address>
                     </div>
                     <div className={classNames(display.flex, display.flexColumn, display.alignCenter, 
-                        responsive.smAlignStart, display.mt1, responsive.smMt0, responsive.smMl2)}>
+                        responsive.smAlignStart, display.mt1, responsive.smMt0, responsive.smMl2, responsive.mdMl3)}>
                         <Typography gutterBottom component="h2" className={classNames(classes.footerSubtitle, text.textLight, display.opacity7)}>
                             Contact Us (Central Office)
                         </Typography>

@@ -40,7 +40,7 @@ export const useStyles = makeStyles(theme => ({
                 color: '#333136',
                 transition: 'all 1s ease-in-out',
                 '&:hover': {
-                    fontWeight: 700
+                    textDecoration: 'underline',
                 }
             }
         }

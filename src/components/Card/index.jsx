@@ -22,7 +22,7 @@ const Card = ({ image, title, link, imageClassName }) => {
                 <Typography component="h2" variant="h5" className={classNames(text.font7, display.mt1)}>
                     { title }
                 </Typography>
-                <Link to={`/services/${link}`} className={classNames(display.mt1, text.noUnderline)}>
+                <Link to={`/locations#${link}`} className={classNames(display.mt1, text.noUnderline)}>
                     <Button 
                         className={classNames(classes.cardButton, text.textLight)}
                         variant="containded">

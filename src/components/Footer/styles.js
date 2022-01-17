@@ -41,6 +41,11 @@ export const useStyles = makeStyles(theme => ({
 
         }
     },
+    footerLink: {
+        '&:hover': {
+            textDecoration: 'underline'
+        }
+    },
     footerAddress: {
         lineHeight: '1.4rem'
     },
@@ -51,6 +56,9 @@ export const useStyles = makeStyles(theme => ({
         }
     },
     footerSocialMediaIcon: {
-        color: '#E7816B !important'
+        color: '#E7816B !important',
+        '&:hover': {
+            color: '#FFAD9B !important'
+        }
     }
 }));

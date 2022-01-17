@@ -19,17 +19,17 @@ const Header = () => {
     const getList = useCallback(() => (
         <>
             <li  className={classNames(classes.headerListItem)}>
-                <Link to="/" className={classNames(text.noUnderline, text.uppercase)}>
+                <Link to="/about-us" className={classNames(text.noUnderline, text.uppercase)}>
                     Our company
                 </Link>
             </li>
             <li  className={classNames(classes.headerListItem)}>
-                <Link to="/" className={classNames(text.noUnderline, text.uppercase)}>
+                <Link to="/locations" className={classNames(text.noUnderline, text.uppercase)}>
                     Locations
                 </Link>
             </li>
             <li  className={classNames(classes.headerListItem)}>
-                <Link to="/" className={classNames(text.noUnderline, text.uppercase)}>
+                <Link to="/contact" className={classNames(text.noUnderline, text.uppercase)}>
                     Contact
                 </Link>
             </li>

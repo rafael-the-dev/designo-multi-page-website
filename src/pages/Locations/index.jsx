@@ -25,6 +25,7 @@ const Locations = () => {
                 countryName="Canada"
                 contentClassName={classes.canadaContent}
                 imageClassName={classes.canadaImageContainer}
+                linkRef="canada"
                 mobileImage={canadaMobileImage}
                 desktopImage={canadaDesktopImage}
                 title1="Designo Central Office"
@@ -36,6 +37,7 @@ const Locations = () => {
                 countryName="Australia"
                 contentClassName={classes.australiaContent}
                 imageClassName={classes.australiaImageContainer}
+                linkRef="australia"
                 mobileImage={australiaMobileImage}
                 desktopImage={australiaDesktopImage}
                 title1="Designo AU Office"
@@ -47,6 +49,7 @@ const Locations = () => {
                 countryName="United Kingdom"
                 contentClassName={classes.ukContent}
                 imageClassName={classes.ukImageContainer}
+                linkRef="united-kingdom"
                 mobileImage={unitedKingdomMobileImage}
                 desktopImage={unitedKingdomDesktopImage}
                 title1="Designo UK Office"
