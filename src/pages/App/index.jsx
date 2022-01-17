@@ -12,6 +12,7 @@ const App = () => {
     const Banner = loadable(() => import('../../components/Banner'));
     const HomePage = loadable(() => import('../Home'));
     const LocationsPage = loadable(() => import('../Locations'));
+    const ContactPage = loadable(() => import('../Contact'));
     const Services = loadable(() => import('../Services'));
 
     return (
@@ -24,6 +25,7 @@ const App = () => {
                             <Routes>
                                 <Route exact path="/services/:id" element={<Services />} />
                                 <Route exact path="/locations" element={<LocationsPage />} />
+                                <Route exact path="/contact" element={<ContactPage />} />
                                 <Route exact path="/" element={<HomePage />} />
                             </Routes>
                             <Banner />
