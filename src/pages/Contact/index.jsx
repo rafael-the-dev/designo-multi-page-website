@@ -23,22 +23,23 @@ const Contact = () => {
     return (
         <>
             <section className={classNames(display.px)}>
-                <div className={classNames(classes.hero, bg.noRepeat)}>
-                    <div>
+                <div className={classNames(classes.hero, bg.noRepeat, responsive.mdAlignCenter)}>
+                    <div className={classNames(classes.heroContent)}>
                         <Typography 
                             component="h2" 
                             variant="h5" 
-                            className={classNames(text.font7, text.alignCenter, text.textLight)}>
+                            className={classNames(text.font7, text.alignCenter, text.textLight, text.smAlignStart)}>
                             Contact Us
                         </Typography>
                         <Typography className={classNames(text.rem9, display.mt1, text.alignCenter, text.textLight,
-                            display.opacity9)}>
+                            display.opacity9, text.smAlignStart)}>
                             Ready to take it to the next level? Let’s talk about your project or idea 
                             and find out how we can help your business grow. If you are looking for 
                             unique digital experiences that’s relatable to your users, drop us a line.
                         </Typography>
                     </div>
-                    <form onSubmit={handleSubmit(onSubmit)} className={classNames(display.mt2)}>
+                    <form onSubmit={handleSubmit(onSubmit)} className={classNames(display.mt2, classes.heroForm,
+                        responsive.mdMt0)}>
                         <div className={classNames(display.alignCenter, display.flex, display.w100, classes.inputGroup)}>
                             <input
                                 className={classNames(display.flexGrow1, display.borderNone, display.outlineNone,
@@ -94,7 +95,7 @@ const Contact = () => {
                     </form>
                 </div>
             </section>
-            <Grid container className={classNames(display.px)}>
+            <Grid container className={classNames(display.px, classes.cardsContainer, responsive.mdMt3, responsive.mdMb2)}>
                 <Card 
                     image={canadaIcon}
                     imageClassName={classes.canadaAvatar}

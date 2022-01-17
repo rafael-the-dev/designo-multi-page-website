@@ -13,6 +13,22 @@ export const useStyles = makeStyles(theme => ({
         padding: '4rem 5%',
         [theme.breakpoints.up('md')]: {
             backgroundImage: `url(${bgPatternDesktop})`,
+            backgroundSize: 500,
+            backgroundPosition: 'left -33px top -100px',
+            display: 'flex'
+        }
+    },
+    heroContent: {
+        [theme.breakpoints.up('md')]: {
+            maxWidth: 400
+        },
+        [theme.breakpoints.up(1100)]: {
+            maxWidth: 500
+        }
+    },
+    heroForm: {
+        [theme.breakpoints.up('md')]: {
+            width: 400
         }
     },
     inputGroup: {
@@ -28,7 +44,13 @@ export const useStyles = makeStyles(theme => ({
         backgroundColor: '#FFF !important',
         marginLeft: 'auto !important',
         marginRight: 'auto !important',
-        padding: '8px 43px !important'
+        padding: '8px 43px !important',
+        [theme.breakpoints.up('sm')]: {
+            marginRight: '0 !important',
+        }
+    },
+    cardsContainer: {
+        transform: 'translate(0, 9%)'
     },
     australiaAvatar: {
         "&::before": {
