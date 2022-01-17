@@ -11,9 +11,9 @@ const Card = ({ image, title, link, imageClassName }) => {
     const text = useTypography();
 
     return (
-        <Grid item xs={12} component="article">
+        <Grid item xs={12} md={4} component="article">
             <div className={classNames(display.flex, display.flexColumn, 
-                display.alignCenter, display.w100, display.mb3)}>
+                display.alignCenter, display.w100, display.mb3, responsive.mdMb0)}>
                 <Avatar 
                     src={image}
                     alt={title}
