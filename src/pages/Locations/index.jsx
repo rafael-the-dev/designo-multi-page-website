@@ -1,7 +1,7 @@
 //import { Button, Grid, Typography } from '@mui/material'
 import classNames from 'classnames'; /**/
 import { useStyles } from './styles'
-import { useDisplay } from '../../styles';
+//import { useDisplay } from '../../styles';
 import Card from './Card';
 
 import canadaMobileImage from '../../assets/images/locations/tablet/image-map-canada.png'
@@ -15,7 +15,7 @@ import unitedKingdomDesktopImage from '../../assets/images/locations/desktop/ima
 
 const Locations = () => {
     const classes = useStyles();
-    const display = useDisplay();
+    //const display = useDisplay();
 
     return (
         <div className={classNames(classes.cardsContainer)}>

@@ -16,9 +16,9 @@ const Contact = () => {
     const responsive = useResponsive();
     const text = useTypography();
 
-    const { formState: { errors }, handleSubmit, register } = useForm();
+    const { formState: { errors }, handleSubmit, register, reset  } = useForm();
 
-    const onSubmit = data => console.log(data);
+    const onSubmit = data => reset();
 
     return (
         <>
