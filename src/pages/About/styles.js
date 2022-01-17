@@ -2,10 +2,16 @@ import { makeStyles } from "@mui/styles";
 import heroImage from '../../assets/images/about/mobile/image-about-hero.jpg'
 import heroBgPattern from '../../assets/images/about/mobile/bg-pattern-hero-about-mobile.svg'
 import worldClassTalentImage from '../../assets/images/about/mobile/image-world-class-talent.jpg'
+import realDealImage from '../../assets/images/about/mobile/image-real-deal.jpg'
 
 
 import heroImageTablet from '../../assets/images/about/tablet/image-about-hero.jpg'
+import worldClassTalentImageTablet from '../../assets/images/about/tablet/image-world-class-talent.jpg'
+import realDealImageTablet from '../../assets/images/about/tablet/image-real-deal.jpg'
+
 import heroImageDesktop from '../../assets/images/about/desktop/image-about-hero.jpg'
+import worldClassTalentDesktopImage from '../../assets/images/about/desktop/image-world-class-talent.jpg'
+import realDealDesktopImage from '../../assets/images/about/desktop/image-real-deal.jpg'
 import heroBgPatternDesktop from '../../assets/images/about/desktop/bg-pattern-hero-about-desktop.svg'
 
 export const useStyles = makeStyles(theme => ({
@@ -13,6 +19,10 @@ export const useStyles = makeStyles(theme => ({
         [theme.breakpoints.up('sm')]: {
             paddingLeft: '5%',
             paddingRight: '5%'
+        },
+        [theme.breakpoints.up('md')]: {
+            paddingLeft: '10%',
+            paddingRight: '10%'
         },
     },
     hero: {
@@ -84,11 +94,41 @@ export const useStyles = makeStyles(theme => ({
         backgroundImage: `url(${worldClassTalentImage})`,
         height: 390,
         objectFit: 'cover',
+        [theme.breakpoints.up('sm')]: {
+            backgroundImage: `url(${worldClassTalentImageTablet})`,
+            borderRadius: '15px 15px 0 0',
+            height: 320,
+        },
+        [theme.breakpoints.up('md')]: {
+            backgroundImage: `url(${worldClassTalentDesktopImage})`,
+            borderRadius: '15px 0 0 15px',
+            height: 400,
+            width: 355
+        }
     },
     detailsContent: {
         padding: '4rem 5%',
+        [theme.breakpoints.up('md')]: {
+            maxWidth: '62%'
+        }
     },
     detailsTitle: {
         color: '#E7816B'
+    },
+    realDealImageContainer: {
+        backgroundImage: `url(${realDealImage})`,
+        height: 390,
+        objectFit: 'cover',
+        [theme.breakpoints.up('sm')]: {
+            backgroundImage: `url(${realDealImageTablet})`,
+            borderRadius: '15px 15px 0 0',
+            height: 320,
+        },
+        [theme.breakpoints.up('md')]: {
+            backgroundImage: `url(${realDealDesktopImage})`,
+            borderRadius: '0 15px 15px 0',
+            height: 400,
+            width: 355
+        }
     }
 }));
