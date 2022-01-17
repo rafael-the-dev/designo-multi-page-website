@@ -7,14 +7,14 @@ import loadable from '@loadable/component';
 const App = () => {
     const theme = createTheme();
 
-    const Header = loadable(() => import('../../components/Header'));
-    const Footer = loadable(() => import('../../components/Footer'));
-    const Banner = loadable(() => import('../../components/Banner'));
-    const HomePage = loadable(() => import('../Home'));
-    const LocationsPage = loadable(() => import('../Locations'));
-    const AboutPage = loadable(() => import('../About'));
-    const ContactPage = loadable(() => import('../Contact'));
-    const Services = loadable(() => import('../Services'));
+    const Header = loadable(() => import(/* webpackChunkName: "Header" */ '../../components/Header'));
+    const Footer = loadable(() => import(/* webpackChunkName: "Footer" */ '../../components/Footer'));
+    const Banner = loadable(() => import(/* webpackChunkName: "Banner" */ '../../components/Banner'));
+    const HomePage = loadable(() => import(/* webpackChunkName: "HomePage" */ '../Home'));
+    const LocationsPage = loadable(() => import(/* webpackChunkName: "LocationsPage" */ '../Locations'));
+    const AboutPage = loadable(() => import(/* webpackChunkName: "AboutPage" */ '../About'));
+    const ContactPage = loadable(() => import(/* webpackChunkName: "ContactPage" */ '../Contact'));
+    const Services = loadable(() => import(/* webpackChunkName: "Services" */ '../Services'));
 
     return (
         <>
