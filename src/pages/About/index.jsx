@@ -1,7 +1,11 @@
-import { Typography } from '@mui/material'
+import { Grid, Typography } from '@mui/material'
 import { useBackground, useDisplay, useResponsive, useTypography } from '../../styles';
 import classNames from 'classnames'; /**/
 import { useStyles } from './styles'
+import australiaIcon from '../../assets/images/contact/illustration-australia.svg';
+import canadaIcon from '../../assets/images/contact/illustration-canada.svg';
+import ukIcon from '../../assets/images/contact/illustration-united-kingdom.svg';
+import Card from '../../components/Card';
 
 const About = () => {
     const bg = useBackground();
@@ -48,8 +52,25 @@ const About = () => {
                     </Typography>
                 </div>
             </section>
+            <Grid container className={classNames(classes.cardsContainer, responsive.mdMb2)}>
+                <Card 
+                    image={canadaIcon}
+                    imageClassName={classes.canadaAvatar}
+                    title="Canada"
+                />
+                <Card 
+                    image={australiaIcon}
+                    imageClassName={classes.australiaAvatar}
+                    title="Australia"
+                />
+                <Card 
+                    image={ukIcon}
+                    imageClassName={classes.ukAvatar}
+                    title="United Kingdom"
+                />
+            </Grid>
             <section className={classNames(display.alignStretch, display.flex, display.flexColumn, display.w100, 
-                classes.details, responsive.mdRow, responsive.mdJustifyBetween, responsive.smMt3, responsive.mdRowReverse)}>
+                classes.details, classes.realDeal, responsive.mdRow, responsive.mdJustifyBetween, responsive.mdRowReverse)}>
                 <div className={classNames(bg.cover, bg.noRepeat, bg.center, classes.image, classes.realDealImageContainer)}></div>
                 <div className={classNames(classes.detailsContent, bg.noRepeat)}>
                     <Typography component="h2" variant="h5" className={classNames(text.alignCenter, text.mdAlignLeft,

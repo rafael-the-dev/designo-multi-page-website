@@ -37,7 +37,7 @@ export const useStyles = makeStyles(theme => ({
             height: 320
         },
         [theme.breakpoints.up('md')]: {
-            height: 320,
+            height: 350,
             width: 320
         }
     },
@@ -102,7 +102,7 @@ export const useStyles = makeStyles(theme => ({
         [theme.breakpoints.up('md')]: {
             backgroundImage: `url(${worldClassTalentDesktopImage})`,
             borderRadius: '15px 0 0 15px',
-            height: 400,
+            height: 440,
             width: 355
         }
     },
@@ -114,6 +114,15 @@ export const useStyles = makeStyles(theme => ({
     },
     detailsTitle: {
         color: '#E7816B'
+    },
+    cardsContainer: {
+        marginTop: '7rem',
+        [theme.breakpoints.up('md')]: {
+            marginTop: '6rem'
+        }
+    },
+    realDeal: {
+        marginTop: '6rem'
     },
     realDealImageContainer: {
         backgroundImage: `url(${realDealImage})`,
@@ -127,7 +136,7 @@ export const useStyles = makeStyles(theme => ({
         [theme.breakpoints.up('md')]: {
             backgroundImage: `url(${realDealDesktopImage})`,
             borderRadius: '0 15px 15px 0',
-            height: 400,
+            height: 440,
             width: 355
         }
     }
