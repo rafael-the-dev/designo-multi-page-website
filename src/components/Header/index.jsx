@@ -37,7 +37,7 @@ const Header = () => {
     ), [ classes, text ]);
 
     return (
-        <header className={classNames(classes.header, display.flex, display.alignCenter, display.justifyBetween)}>
+        <header className={classNames(classes.header, display.px, display.flex, display.alignCenter, display.justifyBetween)}>
             <div className={classNames(display.alignCenter, display.flex, display.justifyBetween, display.w100, responsive.smWAuto)}>
                 <Link to="/" className={classNames(classes.logoContainer)}>
                     <img 

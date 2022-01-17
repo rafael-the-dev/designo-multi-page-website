@@ -22,8 +22,6 @@ export const useStyles = makeStyles(theme => ({
             flexDirection: 'row !important',
             justifyContent: 'space-between',
             transform: 'translate(0px, 36%)',
-        },
-        [theme.breakpoints.up(1200)]: {
             width: '80%'
         }
     },

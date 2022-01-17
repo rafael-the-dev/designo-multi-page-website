@@ -71,7 +71,7 @@ const Home = () => {
                     </Link>
                 </div>
             </div>
-            <Grid container className={classNames(display.px, classes.cardsSection)}>
+            <Grid container className={classNames(display.px, classes.cardsSection, responsive.mdMt2)}>
                 <Card 
                     description="Each project starts with an in-depth brand research to ensure we only create products that serve a purpose. We merge art, design, and technology into exciting new solutions."
                     image={passionaleIllustration}
