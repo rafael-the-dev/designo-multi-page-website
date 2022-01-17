@@ -119,17 +119,3 @@ const Services = () => {
 };
 
 export default Services;
-
-/**
- * 
-                <div className={classNames(display.alignCenter, display.flex, display.flexColumn, display.justifyCenter, classes.project, bg.noReapeat, bg.center, bg.cover, classes.appDesign)}>
-                    <Typography component="h2" variant="h6" className={classNames(text.font7, text.textLight)}>
-                        App Design
-                    </Typography>
-                    <Link to="/" className={classNames(display.mt1, display, text.noUnderline)}>
-                        <Button className={classNames(text.textLight)} endIcon={<ArrowForwardIosIcon className={classNames(classes.rightArrow)} />}>
-                            View projects
-                        </Button>
-                    </Link>
-                </div>
- */

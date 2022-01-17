@@ -1,6 +1,5 @@
 import { makeStyles } from "@mui/styles";
 
-const linearGradient = 'linear-gradient(to bottom, rgba(0, 0, 0, .1), rgba(0, 0, 0, .4))';
 export const useStyles = makeStyles(theme => ({
     card: {
         borderRadius: 15

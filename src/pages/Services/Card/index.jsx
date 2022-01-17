@@ -1,7 +1,7 @@
-import { Button, Grid, Typography } from '@mui/material'
+import { Typography } from '@mui/material'
 import classNames from 'classnames';
 import { useStyles } from './styles'
-import { useBackground, useDisplay, useResponsive, useTypography } from '../../../styles';
+import { useDisplay, useResponsive, useTypography } from '../../../styles';
 
 const Card = ({ description, image, title }) => {
     const display = useDisplay();
