@@ -6,6 +6,8 @@ import Card from './Card'
 import australiaIcon from '../../assets/images/contact/illustration-australia.svg'
 import canadaIcon from '../../assets/images/contact/illustration-canada.svg'
 import ukIcon from '../../assets/images/contact/illustration-united-kingdom.svg'
+import ErrorIcon from '@mui/icons-material/Error';
+import { useForm } from "react-hook-form";
 
 const Contact = () => {
     const bg = useBackground();
@@ -14,10 +16,14 @@ const Contact = () => {
     const responsive = useResponsive();
     const text = useTypography();
 
+    const { formState: { errors }, handleSubmit, register } = useForm();
+
+    const onSubmit = data => console.log(data);
+
     return (
         <>
             <section className={classNames(display.px)}>
-                <div className={classNames(classes.hero, bg.noRepeat, display.pt3)}>
+                <div className={classNames(classes.hero, bg.noRepeat)}>
                     <div>
                         <Typography 
                             component="h2" 
@@ -26,13 +32,66 @@ const Contact = () => {
                             Contact Us
                         </Typography>
                         <Typography className={classNames(text.rem9, display.mt1, text.alignCenter, text.textLight,
-                            display.opacity8)}>
+                            display.opacity9)}>
                             Ready to take it to the next level? Let’s talk about your project or idea 
                             and find out how we can help your business grow. If you are looking for 
                             unique digital experiences that’s relatable to your users, drop us a line.
                         </Typography>
                     </div>
-                    <form></form>
+                    <form onSubmit={handleSubmit(onSubmit)} className={classNames(display.mt2)}>
+                        <div className={classNames(display.alignCenter, display.flex, display.w100, classes.inputGroup)}>
+                            <input
+                                className={classNames(display.flexGrow1, display.borderNone, display.outlineNone,
+                                bg.transparent, classes.input, classes.inputColor, text.rem9)}
+                                placeholder='Name'
+                                {...register("name-field", { required: true })}
+                            />
+                            { errors["name-field"] && <label htmlFor='name-field' className={classNames(text.textLight, display.flex, display.alignCenter, text.rem8)}>
+                                Can't be empty <ErrorIcon />
+                            </label> }
+                        </div>
+                        <div className={classNames(display.alignCenter, display.flex, display.w100, classes.inputGroup,
+                            display.mt1)}>
+                            <input
+                                className={classNames(display.flexGrow1, display.borderNone, display.outlineNone,
+                                bg.transparent, classes.input, classes.inputColor, text.rem9)}
+                                placeholder='Email Address'
+                                {...register("email-field", { required: true })}
+                            />
+                            { errors["email-field"] && <label htmlFor='email-field' className={classNames(text.textLight, display.flex, display.alignCenter, text.rem8)}>
+                                Can't be empty <ErrorIcon />
+                            </label>}
+                        </div>
+                        <div className={classNames(display.alignCenter, display.flex, display.w100, classes.inputGroup,
+                            display.mt1)}>
+                            <input
+                                className={classNames(display.flexGrow1, display.borderNone, display.outlineNone,
+                                bg.transparent, classes.input, classes.inputColor, text.rem9)}
+                                placeholder='Phone'
+                                {...register("phone-field", { required: true })}
+                            />
+                            {errors["phone-field"] && <label htmlFor='phone-field' className={classNames(text.textLight, display.flex, display.alignCenter, text.rem8)}>
+                                Can't be empty <ErrorIcon />
+                            </label> }
+                        </div>
+                        <div className={classNames(display.alignCenter, display.flex, display.w100, classes.inputGroup,
+                            display.mt1)}>
+                            <textarea
+                                className={classNames(display.flexGrow1, display.borderNone, display.outlineNone,
+                                bg.transparent, classes.inputColor, text.rem9 )}
+                                placeholder='Message'
+                                rows={6}
+                                {...register("message-field", { required: true })}
+                            ></textarea>
+                            {errors["message-field"] && <label htmlFor='message-field' className={classNames(text.textLight, display.flex, display.alignCenter, text.rem8)}>
+                                Can't be empty <ErrorIcon />
+                            </label> }
+                        </div>
+                        <Button type='submit' variant="contained" className={classNames(classes.formButton, display.mt2, 
+                            text.textDark, display.block)}>
+                            Submit
+                        </Button>
+                    </form>
                 </div>
             </section>
             <Grid container className={classNames(display.px)}>

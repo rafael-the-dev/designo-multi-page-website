@@ -9,12 +9,26 @@ export const useStyles = makeStyles(theme => ({
         backgroundSize: 775,
         backgroundPosition: 'left -58px top',
         borderRadius: 15,
-        height: 400,
-        paddingLeft: '3%',
-        paddingRight: '3%',
+       // height: 400,
+        padding: '4rem 5%',
         [theme.breakpoints.up('md')]: {
             backgroundImage: `url(${bgPatternDesktop})`,
         }
+    },
+    inputGroup: {
+        borderBottom: '1px solid #ffffffa6'
+    },
+    input: {
+        height: 30,
+    },
+    inputColor: {
+        color: '#ffffffcf'
+    },
+    formButton: {
+        backgroundColor: '#FFF !important',
+        marginLeft: 'auto !important',
+        marginRight: 'auto !important',
+        padding: '8px 43px !important'
     },
     australiaAvatar: {
         "&::before": {
