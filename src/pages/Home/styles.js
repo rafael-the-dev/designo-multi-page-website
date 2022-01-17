@@ -42,7 +42,11 @@ export const useStyles = makeStyles(theme => ({
         }
     },
     heroButton: {
-        backgroundColor: '#FFF !important'
+        backgroundColor: '#FFF !important',
+        '&:hover': {
+            backgroundColor: '#FFAD9B !important',
+            color: '#FFF !important'
+        },
     },
     projectsGrid: {
         display: 'grid',

@@ -51,6 +51,10 @@ export const useStyles = makeStyles(theme => ({
     bannerButton: {
         backgroundColor: '#FFF !important',
         padding: '9px 16px !important',
+        '&:hover': {
+            backgroundColor: '#FFAD9B !important',
+            color: '#FFF !important'
+        },
         [theme.breakpoints.up(900)]: {
             marginTop: '0 !important'
         }
